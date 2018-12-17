@@ -1,0 +1,40 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.bg-primary {
+  background-color: #124e46 !important;
+}
+
+hr.star-light:after {
+	color:#fff;
+	background-color:#124e46;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover{
+	color:#124e46;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover{
+	color:#fff;
+	background:#124e46;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active{
+	background:#124e46;
+}
+
+#mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus{
+	background:#124e46;
+}
+
+.btn-primary{
+	background-color:#124e46;
+	border-color:#124e46;
+}
+
+
+.col-lg-4 {
+	margin-right: 10% !important;
+}

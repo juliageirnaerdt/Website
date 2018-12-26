@@ -4,36 +4,35 @@ html, body {
 }
 
 .bg-primary {
-  background-color: #124e46 !important;
+  background-color: #91c7af !important;
 }
 
 hr.star-light:after {
 	color:#fff;
-	background-color:#124e46;
+	background-color:#91c7af;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover{
-	color:#124e46;
+	color:#91c7af;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:hover{
 	color:#fff;
-	background:#124e46;
+	background:#91c7af;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active{
-	background:#124e46;
+	background:#91c7af;
 }
 
 #mainNav .navbar-nav>li.nav-item>a.nav-link.active:focus{
-	background:#124e46;
+	background:#91c7af;
 }
 
 .btn-primary{
-	background-color:#124e46;
-	border-color:#124e46;
+	background-color:#91c7af;
+	border-color:#91c7af;
 }
-
 
 .col-lg-4 {
 	margin-right: 10% !important;

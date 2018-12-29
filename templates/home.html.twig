@@ -87,6 +87,12 @@
 		<div class="container">
 			<h2 class="text-center text-uppercase text-secondary mb-0">Contact Me</h2>
 			<hr class="star-dark mb-5">
+
+
+					{{ form_start(form) }}
+					{{ form_widget(form) }}
+					{{ form_end(form) }}
+
 			<div class="row">
 				<div class="col-lg-8 mx-auto">
 					<form name="sentMessage" id="contactForm" novalidate="novalidate">
@@ -106,7 +112,7 @@
 						</div>
 						<div class="control-group">
 							<div class="form-group floating-label-form-group controls mb-0 pb-2">
-								<label>Phone Number</label>
+								<label>Datum</label>
 								<input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number.">
 								<p class="help-block text-danger"></p>
 							</div>

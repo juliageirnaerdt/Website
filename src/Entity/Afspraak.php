@@ -42,7 +42,7 @@ class Afspraak
     /**
      * @ORM\Column(type="boolean")
      */
-    private $bevestiging;
+    private $bevestiging = false;
 
     public function getId(): ?int
     {

@@ -6,10 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use App\Form\AfspraakType;
 
 class HomeController extends Controller
 {
@@ -21,15 +18,7 @@ class HomeController extends Controller
     {
     	$afspraak = new Afspraak();
 
-    	$form = $this->createFormBuilder($afspraak)
-           	->add('voornaam', TextType::class)
-           	->add('achternaam', TextType::class)
-           	->add('startdatum', DateType::class)
-           	->add('einddatum', DateType::class)
-           	->add('behandeling', TextType::class)
-           	->add('email', EmailType::class)
-           	->add('save', SubmitType::class, array('label' => 'Maak Afspraak'))
-           	->getForm();
+    	$form = $this->createForm(AfspraakType::class, $afspraak);
 
         $form->handleRequest($request);
 

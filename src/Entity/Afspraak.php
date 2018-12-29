@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -15,30 +16,42 @@ class Afspraak
      * @ORM\Column(type="integer")
      */
     private $id;
+
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
      */
     private $voornaam;
+
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
      */ 
     private $achternaam;
+
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank
      */
     private $startdatum;
+
     /**
      * @ORM\Column(type="datetime")
      */
     private $einddatum;
+
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
      */
     private $behandeling;
+
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\NotBlank
      */
     private $email;
+
     /**
      * @ORM\Column(type="boolean")
      */

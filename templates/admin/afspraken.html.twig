@@ -1,0 +1,60 @@
+{% extends 'admin/base.html.twig' %} 
+{% block body %}
+
+
+<!-- ============================================================== -->
+<!-- pagehader  -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header">
+            <h3 class="mb-2">Afspraken </h3>
+            <p class="pageheader-text">Lorem ipsum dolor sit ametllam fermentum ipsum eu porta consectetur adipiscing elit.Nullam vehicula nulla ut egestas rhoncus.</p>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Afspraken</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- pagehader  -->
+<!-- ============================================================== -->
+<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+    <div class="card">
+        <h5 class="card-header">Hoverable Table</h5>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Achternaam</th>
+                        <th scope="col">Voornaam</th>
+                        <th scope="col">Datum</th>
+                        <th scope="col">Behandeling</th>
+                        <th scope="col">Bevestigd</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for afspraak in afspraken %}
+                    <tr>
+
+                        <th scope="row">1</th>
+                        <td>{{ afspraak.achternaam }}</td>
+                        <td>{{ afspraak.voornaam }}</td>
+                        <td>{{ afspraak.startdatum|date('Y-m-d') }}</td>
+                        <td>{{ afspraak.behandeling }}</td>
+                        <td>{{ afspraak.bevestiging }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

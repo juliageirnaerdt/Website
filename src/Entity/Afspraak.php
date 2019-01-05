@@ -128,12 +128,12 @@ class Afspraak
 
         return $this;
     }
-    public function getBevestiging(): ?boolean
+    public function getBevestiging(): ?bool
     {
         return $this->bevestiging;
     }
 
-    public function setBevestiging(boolean $bevestiging): self
+    public function setBevestiging(bool $bevestiging): self
     {
         $this->bevestiging = $bevestiging;
 

@@ -13,7 +13,7 @@
             <div class="page-breadcrumb">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                        <li class="breadcrumb-item"><a href="http://127.0.0.1:8000/admin" class="breadcrumb-link">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Afspraken</li>
                     </ol>
                 </nav>
@@ -46,7 +46,7 @@
                         <th scope="row">1</th>
                         <td>{{ afspraak.achternaam }}</td>
                         <td>{{ afspraak.voornaam }}</td>
-                        <td>{{ afspraak.startdatum|date('Y-m-d') }}</td>
+                        <td>{{ afspraak.startdatum|date('Y-m-d H:i') }}</td>
                         <td>{{ afspraak.behandeling }}</td>
                         <td>{{ afspraak.bevestiging }}</td>
                     </tr>

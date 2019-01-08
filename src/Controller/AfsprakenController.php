@@ -16,6 +16,7 @@ class AfsprakenController extends Controller
 	public function afspraken(Request $request)
 	{
 
+		//Opslaan in de database
 		$repository = $this->getDoctrine()->getRepository(Afspraak::class);
 		$afspraken = $repository->findAll();
 

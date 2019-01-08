@@ -16,6 +16,9 @@ class HomeController extends Controller
 	*/
     public function home(Request $request)
     {
+
+
+    	//afspraak entiteit aanmaken
     	$afspraak = new Afspraak();
 
     	$form = $this->createForm(AfspraakType::class, $afspraak);
@@ -23,12 +26,9 @@ class HomeController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-	        // $form->getData() holds the submitted values
-	        // but, the original `$task` variable has also been updated
+	       
 	        $afspraak = $form->getData();
 
-	        // ... perform some action, such as saving the task to the database
-	        // for example, if Task is a Doctrine entity, save it!
 	         $entityManager = $this->getDoctrine()->getManager();
 	         $entityManager->persist($afspraak);
 	         $entityManager->flush();

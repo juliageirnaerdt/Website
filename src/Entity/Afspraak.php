@@ -10,6 +10,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Afspraak
 {
+
+//Properties aanmaken met behulp van doctrine notaties
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()

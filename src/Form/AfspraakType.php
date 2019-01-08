@@ -18,6 +18,7 @@ class AfspraakType extends AbstractType
             ->add('voornaam', TextType::class)
            	->add('achternaam', TextType::class)
            	->add('startdatum', DateTimeType::class)
+           	->add('einddatum', DateTimeType::class)
            	->add('behandeling', ChoiceType::class, array(
            		'choices' => array(
            			'Behandeling 1' => 'Behandeling1',

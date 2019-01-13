@@ -17,16 +17,15 @@ class HomeController extends Controller
     public function home(Request $request)
     {
 
-
     	//afspraak entiteit aanmaken
     	$afspraak = new Afspraak();
 
     	$form = $this->createForm(AfspraakType::class, $afspraak);
 
         $form->handleRequest($request);
-
+        // dump($form->getData());die;
         if ($form->isSubmitted() && $form->isValid()) {
-	       
+	        
 	        $afspraak = $form->getData();
 
 	         $entityManager = $this->getDoctrine()->getManager();

@@ -15,19 +15,44 @@ class AfspraakType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('voornaam', TextType::class)
-           	->add('achternaam', TextType::class)
-           	->add('startdatum', DateTimeType::class)
-           	->add('einddatum', DateTimeType::class)
+            ->add('voornaam', TextType::class, array(
+            	'attr' => array(
+            		'placeholder' => 'Voornaam',
+            		'class' => 'form-control'
+            		)
+            	))
+           	->add('achternaam', TextType::class, array(
+           		'attr' => array(
+           			'placeholder' => 'Achternaam',
+            		'class' => 'form-control'
+           			)
+           		))
+           	->add('startdatum', DateTimeType::class, array(
+           		'html5' => false,
+           		'widget' => 'single_text',
+        		'input'  => 'string',
+        		'attr' => array(
+        			'placeholder' => 'Datum',
+            		'class' => 'form-control datetimepicker-input'
+           			)
+           		))
+           //	->add('einddatum', DateTimeType::class)
            	->add('behandeling', ChoiceType::class, array(
+           		'attr' => array(
+            		'class' => 'form-control'
+            		),
            		'choices' => array(
            			'Behandeling 1' => 'Behandeling1',
            			'Behandeling 2' => 'Behandeling2',
            			'Behandeling 3' => 'Behandeling3'
            			),
            		))
-           	->add('email', EmailType::class)
-           	->add('save', SubmitType::class, array('label' => 'Maak Afspraak'));
+           	->add('email', EmailType::class, array(
+           		'attr' => array(
+           			'placeholder' => 'Email',
+            		'class' => 'form-control'
+           			)
+           		));
         
     }
 }
